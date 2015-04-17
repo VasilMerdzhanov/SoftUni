@@ -20,8 +20,6 @@ class MagicStrings
 {
     static void Main()
     {
-        int a = 4;
-        Console.WriteLine(a.ToString());
         int diff = int.Parse(Console.ReadLine());
         char[] letters = { 'k', 'n', 'p', 's' };
 
