@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("05. Night-Path")]
+[assembly: AssemblyTitle("05. Knight-Path")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("05. Night-Path")]
+[assembly: AssemblyProduct("05. Knight-Path")]
 [assembly: AssemblyCopyright("Copyright © Microsoft 2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("bcf4dd48-b072-422b-9288-08a0979acd2a")]
+[assembly: Guid("d8c43199-b1cd-44d9-9ec6-b893553466d4")]
 
 // Version information for an assembly consists of the following four values:
 //

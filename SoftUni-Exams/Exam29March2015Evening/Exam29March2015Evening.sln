@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Magic-Wand", "03. Magic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Array-Matcher", "04. Array-Matcher\04. Array-Matcher.csproj", "{B695BB96-87F1-47BC-BA93-F809609EA114}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Night-Path", "05. Night-Path\05. Night-Path.csproj", "{5062F752-BD77-4943-8A4E-D1690A901BF1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Knight-Path", "05. Knight-Path\05. Knight-Path.csproj", "{77BE5505-118E-4212-B7F2-592E7C2C648F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{B695BB96-87F1-47BC-BA93-F809609EA114}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B695BB96-87F1-47BC-BA93-F809609EA114}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B695BB96-87F1-47BC-BA93-F809609EA114}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5062F752-BD77-4943-8A4E-D1690A901BF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5062F752-BD77-4943-8A4E-D1690A901BF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5062F752-BD77-4943-8A4E-D1690A901BF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5062F752-BD77-4943-8A4E-D1690A901BF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77BE5505-118E-4212-B7F2-592E7C2C648F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77BE5505-118E-4212-B7F2-592E7C2C648F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77BE5505-118E-4212-B7F2-592E7C2C648F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77BE5505-118E-4212-B7F2-592E7C2C648F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

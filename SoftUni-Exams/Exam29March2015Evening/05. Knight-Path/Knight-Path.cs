@@ -55,7 +55,7 @@ class NightPath
             {
                 commands = input.Split(' ').ToArray();
                 directions.Add(commands);
-            }  
+            }
         }
 
         // apply all sets of commands
@@ -141,4 +141,3 @@ class NightPath
         }
     }
 }
-
