@@ -20,55 +20,39 @@ class LongestIncreasingSequence
 {
     static void Main()
     {
-        Console.WriteLine("Please, enter a sequence of strings, all in one line, separated by a space:");
-        int[] array = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
-
-        List<List<int>> sequences = new List<List<int>>();
-
         // declarations
-        int number = 0;
-        int numberL = 0;
-        int count = 0;
+        int numberLongest = 0;
         int bestCount = 0;
         int longestCount = 0;
 
+        // input
+        Console.WriteLine("Please, enter a sequence of strings, all in one line, separated by a space:");
+        int[] array = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+
+        // logic
+        List<List<int>> sequences = new List<List<int>>();
         Console.WriteLine("\nOutput:");
-        // logic - searching for increasing sequences
+
         for (int i = 0; i < array.Length - 1; i++)
         {
             // searching for current increasing sequence
-            count = 1;
-            int j = i + 1;
-            int k = i;
-            while (array[k] < array[j])
-            {
-                count++;
-                j++;
-                k++;
-                if (j >= array.Length)
-                {
-                    break;
-                }
-            }
+            var count = CountSequence(i, array);
 
-            // printing current increasing sequence
             if (count >= bestCount)
             {
                 bestCount = count;
-                number = i;
+                int number = i;
                 i += count - 1;
-                for (int l = number; l <= number + bestCount - 1; l++)
-                {
-                    Console.Write("{0} ", array[l]);
-                }
-                Console.WriteLine();
+
+                // printing current increasing sequence
+                PrintSequence(number, bestCount, array);
 
                 // checking if the current increasing sequence is longer than the longest one
                 if (bestCount > longestCount)
                 {
                     // storing the start and end index of the longest increasing sequence
                     longestCount = bestCount;
-                    numberL = number;
+                    numberLongest = number;
                 }
 
                 // so that we can restart the search for current increasing sequences
@@ -77,11 +61,35 @@ class LongestIncreasingSequence
             }
         }
 
+        // output
         Console.Write("Longest: ");
-        for (int l = numberL; l <= numberL + longestCount - 1; l++)
+        PrintSequence(numberLongest, longestCount, array);
+    }
+
+    private static void PrintSequence(int number, int bestCount, int[] array)
+    {
+        for (int l = number; l <= number + bestCount - 1; l++)
         {
             Console.Write("{0} ", array[l]);
         }
         Console.WriteLine();
+    }
+
+    private static int CountSequence(int i, int[] array)
+    {
+        int count = 1;
+        int j = i + 1;
+        int k = i;
+        while (array[k] < array[j])
+        {
+            count++;
+            j++;
+            k++;
+            if (j >= array.Length)
+            {
+                break;
+            }
+        }
+        return count;
     }
 }

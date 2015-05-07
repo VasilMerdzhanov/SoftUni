@@ -10,7 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-class SortArrayUsingSelectionSort
+class SortArrayUsingSelectionSort2
 {
     static void Main()
     {
@@ -19,26 +19,21 @@ class SortArrayUsingSelectionSort
         Console.WriteLine("Please, enter a couple of numbers, all in one line, separated by a space:");
         int[] inputArr = Console.ReadLine().Split(charSeparators, StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
 
-        // logic
-        var sorted = SelectionSort(inputArr);
+        int length = inputArr.Length;
+        List<int> tempList = new List<int>();// initial int array converted into list
+        //List<int> sorted = new List<int>(); // sorted list - to accomodate the sorted numbers from the above tempList
+        int[] sorted = new int[length];
+
+        for (int i = 0; i < length; i++)
+        {
+            tempList = inputArr.Skip(i).Take(length - i).ToList();
+            int x = tempList.Min();
+            sorted[i] = x;
+        }
 
         // printing
         string result = string.Join(", ", sorted);
         Console.WriteLine("Output:\n[{0}]", result);
-    }
-
-    private static List<int> SelectionSort(int[] inputArr)
-    {
-        List<int> tempList = inputArr.ToList(); 
-        List<int> sorted = new List<int>(); 
-
-        while (tempList.Count != 0)
-        {
-            int x = tempList.Min();
-            sorted.Add(x);
-            tempList.Remove(x);
-        }
-        return sorted;
     }
 }
 

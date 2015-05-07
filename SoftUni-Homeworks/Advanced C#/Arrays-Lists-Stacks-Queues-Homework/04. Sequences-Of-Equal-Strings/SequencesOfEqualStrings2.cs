@@ -16,20 +16,22 @@ class SequencesOfEqualStrings2
 {
     static void Main()
     {
+        // input
         Console.WriteLine("Please, enter a sequence of strings, all in one line, separated by a space:");
         string[] input = Console.ReadLine().Split(' ').ToArray();
-        //Console.WriteLine(string.Join(" ", input));
 
+        // composing a dictionary of strings and their respective counts
+        // this method doesn't take into considerations the strings position within the input string array
         Dictionary<string, int> equalStrings = new Dictionary<string, int>();
-
         for (int i = 0; i < input.Length; i++)
         {
             if (!equalStrings.ContainsKey(input[i]))
             {
-                equalStrings.Add(input[i], AppCount(input, input[i]));
+                equalStrings.Add(input[i], AppearanceCount(input, input[i]));
             }
         }
 
+        // printing
         Console.WriteLine("\nOutput:");
         foreach (KeyValuePair<string, int> pair in equalStrings)
         {
@@ -38,7 +40,7 @@ class SequencesOfEqualStrings2
         }
     }
 
-    static int AppCount(string[] arr, string X)
+    static int AppearanceCount(string[] arr, string X)
     {
         // counting how many times number appears in the input array
         int counter = arr.Count(n => n == X);

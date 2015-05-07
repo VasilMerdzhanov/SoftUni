@@ -5,6 +5,10 @@ Modify the program you wrote for the previous problem to print the results in th
  * when two lines have the same number of operands, the one containing the smallest operand should be printed first. 
  * If two or more lines contain the same number of operands and have the same smallest operand, the order of printing is not important. 
  * Example:
+ * Input	            Output
+ -2
+-5 4 92 0 928 1 -1 4	-5 + -1 + 4 = -2
+                        -5 + -1 + 0 + 4 = -2
  */
 
 using System;
@@ -84,7 +88,7 @@ class SortedSubsetSums
         N = int.Parse(Console.ReadLine());
 
         // input array
-        Console.WriteLine("Please enter a sequence of numbers, separated by a space: ");
+        Console.WriteLine("Please, enter a sequence of numbers, separated by a space: ");
         numbers = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
         Console.WriteLine("\nOutput:");
 

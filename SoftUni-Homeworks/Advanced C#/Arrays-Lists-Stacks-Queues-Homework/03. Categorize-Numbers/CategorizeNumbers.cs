@@ -13,11 +13,13 @@ class CategorizeNumbers
 {
     static void Main()
     {
-        Console.Write("please, enter a value for N: ");
-        int N = int.Parse(Console.ReadLine());
-
+        // declarations
         List<double> floatNumbers = new List<double>();
         List<int> roundNumbers = new List<int>();
+        
+        // input and categorization
+        Console.Write("please, enter a value for N: ");
+        int N = int.Parse(Console.ReadLine());
 
         for (int i = 0; i < N; i++)
         {
@@ -35,6 +37,7 @@ class CategorizeNumbers
             }
         }
 
+        // output
         string floats = string.Join(", ", floatNumbers);
         string rounds = string.Join(", ", roundNumbers);
         Console.WriteLine("\nOutput:");
