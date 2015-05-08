@@ -7,27 +7,25 @@ Input	    Output
  */
 
 using System;
+using System.Linq;
 
-class ReverseNumber
+class Program
 {
     static void Main()
     {
         // input
-        Console.Write("Please, enter floating-point number: ");
-        string input = Console.ReadLine();
+        double inputNum = double.Parse(Console.ReadLine());
 
-        double reversed = ReverseNum(input);
+        // output
+        double reversed = GetReversedNumber(inputNum);
         Console.WriteLine(reversed);
     }
-    private static double ReverseNum(string input)
+
+    private static double GetReversedNumber(double inputNum)
     {
-        char[] digits = new char[input.Length]; ;
-        // extract the input number digits in reversed order
-        for (int i = 0, j = input.Length - 1; j >= 0; i++, j--)
-        {
-            digits[i] = input[j];
-        }
-        string result = string.Join("", digits);
-        return double.Parse(result);
+        bool isNegative = inputNum < 0;
+        string input = string.Join("", inputNum.ToString().TrimStart('-').Reverse());
+        double number = double.Parse(input);
+        return isNegative ? -number : number;
     }
 }
