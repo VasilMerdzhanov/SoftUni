@@ -26,10 +26,10 @@ class CollectTheCoins
     private static void Main()
     {
         // input
-        char[][] board = new char[4][];
+        string[] board = new string[4];
         for (int i = 0; i < 4; i++)
         {
-            board[i] = Console.ReadLine().ToCharArray();
+            board[i] = Console.ReadLine();
         }
         char[] commands = Console.ReadLine().ToCharArray();
 
