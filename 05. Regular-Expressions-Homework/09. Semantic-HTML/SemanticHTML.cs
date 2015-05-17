@@ -30,6 +30,8 @@ Output
  */
 
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
@@ -38,28 +40,54 @@ class SemanticHTML
     static void Main()
     {
         // input
+        List<string> results = new List<string>();
         string inputLine;
-        StringBuilder sb = new StringBuilder();
+        string[] semanticTags = {"main", "header", "nav", "article", "section", "aside", "footer"};
+
+        string openingTags = @"<div.*?\b((id|class)\s*=\s*""(.*?)"").*?>";
+        Regex users = new Regex(openingTags);
+        string closeTagsPattern = @"<\/div>\s.*?(\w+)\s*-->";
+        Regex closers = new Regex(closeTagsPattern);
+
         while (!((inputLine = Console.ReadLine()) == "END"))
         {
-            sb.Append(inputLine);
+            // opening tags
+            MatchCollection matchesOp = users.Matches(inputLine);
+            foreach (Match match in matchesOp)
+            {
+                string attrName = match.Groups[1].Value;
+                string attrValue = match.Groups[3].Value;
+
+                if (semanticTags.Contains(attrValue))
+                {
+                    string replaceTag = Regex.Replace(match.ToString(), "div", word => attrValue);
+                    replaceTag = Regex.Replace(replaceTag, attrName, "");
+                    replaceTag = Regex.Replace(replaceTag, "\\s*>", ">");
+                    replaceTag = Regex.Replace(replaceTag, "\\s{2,}", " ");
+                    inputLine = Regex.Replace(inputLine, match.ToString(), replaceTag);
+                }
+            }
+
+            // closing tags
+            MatchCollection matchesCl = closers.Matches(inputLine);
+            foreach (Match match in matchesCl)
+            {
+                string commentValue = match.Groups[1].Value;
+                if (semanticTags.Contains(commentValue))
+                {
+                    inputLine = Regex.Replace(inputLine, match.ToString(), String.Format("</" + commentValue + ">"));
+                }
+            }
+
+            // storing result lines
+            results.Add(inputLine);
         }
-        string text = sb.ToString();
 
-        string patternOpeningTags = @"<div.*?\b((id|class)\s*=\s*""(.*?)"").*?>";
-        Regex users = new Regex(patternOpeningTags);
-        MatchCollection matches = users.Matches(text);
-
-        foreach (Match match in matches)
+        // printing
+        for (int i = 0; i < results.Count; i++)
         {
-            string attrName = match.Groups[1].Value;
-            string attrValue = match.Groups[3].Value;
-            string replaceTag = Regex.Replace(match.ToString(), "div", word => attrValue);
-            replaceTag = Regex.Replace(replaceTag, attrName, "");
-            replaceTag = Regex.Replace(replaceTag, "\\s*>", ">");
-            replaceTag = Regex.Replace(replaceTag, "\\s{2,}", " ");
-            Console.WriteLine(replaceTag);
-        }
+            Console.WriteLine(results[i]);
+        }   
     }
 }
 
