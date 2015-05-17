@@ -1,10 +1,5 @@
-<li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-
-
-                    KatyaMarincheva
-                    <strong class="caret"></strong>
-                </a>
-
-                <ul class="dropdown-menu userDropdown" id="dropdownAdmin">
-                    <li>
+<ul>
+ <li>
+  <a href=http://softuni.bg>SoftUni</a>
+ </li>
+</ul>
