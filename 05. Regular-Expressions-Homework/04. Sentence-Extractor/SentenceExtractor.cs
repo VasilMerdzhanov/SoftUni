@@ -1,5 +1,16 @@
-﻿using System;
-using System.Linq;
+﻿/* Problem 4.	Sentence Extractor
+Write a program that reads a keyword and some text from the console and prints all sentences from the text, 
+ * containing that word. A sentence is any sequence of words ending with '.', '!' or '?'. Examples:
+Input	
+is
+This is my cat! And this is my dog. We happily live in Paris – the most beautiful city in the world! Isn’t it great? Well it is :)	
+ * 
+Output
+This is my cat!
+And this is my dog.
+ */
+
+using System;
 using System.Text.RegularExpressions;
 
 class SentenceExtractor

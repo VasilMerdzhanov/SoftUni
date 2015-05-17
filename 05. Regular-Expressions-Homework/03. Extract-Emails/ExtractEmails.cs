@@ -9,11 +9,12 @@ Write a program to extract all email addresses from a given text. The text comes
 •	Examples of valid emails: info@softuni-bulgaria.org, kiki@hotmail.co.uk, no-reply@github.com, s.peterson@mail.uu.net, info-bg@software-university.software.academy. 
 •	Examples of invalid emails: --123@gmail.com, …@mail.bg, .info@info.info, _steve@yahoo.cn, mike@helloworld, mike@.unknown.soft., s.johnson@invalid-.
 Examples:
-Input	Output
+Input	
 Please contact us at: support@github.com.	support@github.com
-Just send email to s.miller@mit.edu and j.hopking@york.ac.uk for more information.	s.miller@mit.edu
+Just send email to s.miller@mit.edu and j.hopking@york.ac.uk for more information.	
+Output
+s.miller@mit.edu
 j.hopking@york.ac.uk
-Many users @ SoftUni confuse email addresses. We @ Softuni.BG provide high-quality training @ home or @ class. –- steve.parker@softuni.de.	steve.parker@softuni.de
  */
 
 using System;
