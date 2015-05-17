@@ -21,6 +21,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. Query-Mess", "07. Query
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08. Use-YourChains-Buddy", "08. Use-YourChains-Buddy\08. Use-YourChains-Buddy.csproj", "{4D28363A-734E-4841-9051-A996F210D8A1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "ConsoleApplication1\ConsoleApplication1.csproj", "{81E1742F-E9FB-4C83-81DF-376F72E31D1D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09. Semantic-HTML", "09. Semantic-HTML\09. Semantic-HTML.csproj", "{DB4145D9-7CD7-44EF-AAC3-6C6C9C4E8502}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +67,14 @@ Global
 		{4D28363A-734E-4841-9051-A996F210D8A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D28363A-734E-4841-9051-A996F210D8A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D28363A-734E-4841-9051-A996F210D8A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81E1742F-E9FB-4C83-81DF-376F72E31D1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81E1742F-E9FB-4C83-81DF-376F72E31D1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81E1742F-E9FB-4C83-81DF-376F72E31D1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81E1742F-E9FB-4C83-81DF-376F72E31D1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB4145D9-7CD7-44EF-AAC3-6C6C9C4E8502}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB4145D9-7CD7-44EF-AAC3-6C6C9C4E8502}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB4145D9-7CD7-44EF-AAC3-6C6C9C4E8502}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB4145D9-7CD7-44EF-AAC3-6C6C9C4E8502}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
