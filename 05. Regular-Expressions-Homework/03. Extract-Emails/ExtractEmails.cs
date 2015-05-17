@@ -28,7 +28,7 @@ class ExtractEmails
         string text = Console.ReadLine();
 
         // logic
-        string pattern = @"(?<=\s|^)([A-Za-z0-9]+[_.-]*?\w+@(\w+[-]*?\w+\.)+\w+[-]*?\w+)\b";
+        string pattern = @"(?<=\s|^)([a-z0-9]+(?:[_.-][a-z0-9]+)*@(?:[a-z]+\-?[a-z]+\.)+[a-z]+\-?[a-z]+)\b";
         Regex rgx = new Regex(pattern);
         MatchCollection matches = rgx.Matches(text);
 
